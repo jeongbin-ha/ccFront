@@ -1,0 +1,20 @@
+
+import React, { useState } from 'react';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import PostListPage from './pages/PostListPage';
+import PostDetailPage from './pages/PostDetailPage';
+import PostCreatePage from './pages/PostCreatePage';
+//import PostEditPage from './pages/PostEditPage';
+
+const BoardPage = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<PostListPage />} />
+      <Route path="/post/:id" element={<PostDetailPage />} />
+      <Route path="/create" element={<PostCreatePage />} />
+      {/*<Route path="/edit/:id" element={<PostEditPage />} />*/}
+    </Routes>
+  );
+};
+
+export default BoardPage;
